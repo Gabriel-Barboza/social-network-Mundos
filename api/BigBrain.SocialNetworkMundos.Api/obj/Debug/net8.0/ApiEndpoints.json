@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "BigBrain.SocialNetworkMundos.Api.Controllers.UsersController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BigBrain.SocialNetworkMundos.Domain.Models.Requests.CreateUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

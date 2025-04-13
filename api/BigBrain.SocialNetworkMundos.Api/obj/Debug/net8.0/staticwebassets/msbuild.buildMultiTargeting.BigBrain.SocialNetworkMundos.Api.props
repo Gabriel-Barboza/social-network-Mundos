@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BigBrain.SocialNetworkMundos.Api.props" />
+</Project>

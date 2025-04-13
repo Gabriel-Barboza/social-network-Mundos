@@ -1,0 +1,16 @@
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\bin\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.deps.json
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\bin\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.dll
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\bin\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.pdb
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\bin\Debug\net8.0\BigBrain.SocialNetworkMundos.Domain.dll
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\bin\Debug\net8.0\BigBrain.SocialNetworkMundos.Domain.pdb
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.csproj.AssemblyReference.cache
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.AssemblyInfoInputs.cache
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.AssemblyInfo.cs
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.csproj.CoreCompileInputs.cache
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.sourcelink.json
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.88BA1C93.Up2Date
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.dll
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\refint\BigBrain.SocialNetworkMundos.Application.dll
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.pdb
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\ref\BigBrain.SocialNetworkMundos.Application.dll
