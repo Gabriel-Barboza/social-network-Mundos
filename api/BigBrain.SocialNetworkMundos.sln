@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBrain.SocialNetworkMundos.Api", "BigBrain.SocialNetworkMundos.Api\BigBrain.SocialNetworkMundos.Api.csproj", "{46A32E06-B6D4-4210-A516-3F9B912ED846}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46A32E06-B6D4-4210-A516-3F9B912ED846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A32E06-B6D4-4210-A516-3F9B912ED846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A32E06-B6D4-4210-A516-3F9B912ED846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A32E06-B6D4-4210-A516-3F9B912ED846}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {692E7DF6-9876-48AD-8DDC-1C9F371A868D}
+	EndGlobalSection
+EndGlobal
