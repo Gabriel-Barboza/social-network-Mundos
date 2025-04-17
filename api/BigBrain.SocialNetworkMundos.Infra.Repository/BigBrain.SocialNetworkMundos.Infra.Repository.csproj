@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BigBrain.SocialNetworkMundos.Application\BigBrain.SocialNetworkMundos.Application.csproj" />
+    <ProjectReference Include="..\BigBrain.SocialNetworkMundos.Domain\BigBrain.SocialNetworkMundos.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

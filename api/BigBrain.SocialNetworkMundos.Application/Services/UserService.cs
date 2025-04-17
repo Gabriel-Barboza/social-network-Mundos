@@ -6,7 +6,12 @@ namespace BigBrain.SocialNetworkMundos.Application.Services
 {
     public class UserService : IUserService
     {
-        public Task<User> CreateUserAsync(CreateUserRequest request)
+        private readonly IUserRepository _userRepository;
+        public UserService(IUserRepository userRepository )
+        {
+            _userRepository = userRepository;
+        }
+        public async Task<User> CreateUserAsync(CreateUserRequest request)
         {
             var user = new User
             {
@@ -17,7 +22,9 @@ namespace BigBrain.SocialNetworkMundos.Application.Services
                 CreatedAt = DateTime.UtcNow,
 
             };
-            return Task.FromResult(user);
+           
+            user = await _userRepository.CreateUserAsync(user);
+            return user;
         }
     }
 }

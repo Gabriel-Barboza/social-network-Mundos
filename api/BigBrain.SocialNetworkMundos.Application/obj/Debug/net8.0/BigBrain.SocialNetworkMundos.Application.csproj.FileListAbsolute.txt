@@ -1,4 +1,5 @@
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\bin\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.deps.json
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\bin\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.runtimeconfig.json
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\bin\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.dll
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\bin\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.pdb
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\bin\Debug\net8.0\BigBrain.SocialNetworkMundos.Domain.dll
@@ -13,4 +14,5 @@ C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Applica
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.dll
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\refint\BigBrain.SocialNetworkMundos.Application.dll
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.pdb
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Application.genruntimeconfig.cache
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Application\obj\Debug\net8.0\ref\BigBrain.SocialNetworkMundos.Application.dll

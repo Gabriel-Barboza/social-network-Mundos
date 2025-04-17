@@ -15,11 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 -Application", "3 -Applic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBrain.SocialNetworkMundos.Application", "BigBrain.SocialNetworkMundos.Application\BigBrain.SocialNetworkMundos.Application.csproj", "{AD2C744C-468F-4F43-8148-BCDA7FAC4FFD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 -Infra", "4 -Infra", "{79C56E32-BA22-4041-B6BF-8628D1A18A21}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 -Infra", "4 -Infra", "{DD646CDC-7308-4291-AEC1-1E76D3D80AAB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 -Repository", "4.1 -Repository", "{0A1AB570-E01F-4904-96A7-EFC4E6CA59D2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBrain.SocialNetworkMundos.Infra.Repository", "BigBrain.SocialNetworkMundos.Infra.Repository\BigBrain.SocialNetworkMundos.Infra.Repository.csproj", "{61E57EA6-421D-4AC4-B013-F6981CB9BF34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBrain.SocialNetworkMundos.infrastructure", "BigBrain.SocialNetworkMundos.infrastructure\BigBrain.SocialNetworkMundos.infrastructure.csproj", "{31C516B5-759C-4D8F-8D8C-5F5CC1797C6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +37,10 @@ Global
 		{AD2C744C-468F-4F43-8148-BCDA7FAC4FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD2C744C-468F-4F43-8148-BCDA7FAC4FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD2C744C-468F-4F43-8148-BCDA7FAC4FFD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61E57EA6-421D-4AC4-B013-F6981CB9BF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61E57EA6-421D-4AC4-B013-F6981CB9BF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61E57EA6-421D-4AC4-B013-F6981CB9BF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61E57EA6-421D-4AC4-B013-F6981CB9BF34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31C516B5-759C-4D8F-8D8C-5F5CC1797C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C516B5-759C-4D8F-8D8C-5F5CC1797C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C516B5-759C-4D8F-8D8C-5F5CC1797C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C516B5-759C-4D8F-8D8C-5F5CC1797C6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,8 +49,7 @@ Global
 		{46A32E06-B6D4-4210-A516-3F9B912ED846} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{C9E58C9A-5EA5-4EED-BD77-C559E8D23E7A} = {1E442050-580E-4720-9303-196C014E372C}
 		{AD2C744C-468F-4F43-8148-BCDA7FAC4FFD} = {77233E68-C533-49B7-BCFC-DFFFC8738701}
-		{0A1AB570-E01F-4904-96A7-EFC4E6CA59D2} = {79C56E32-BA22-4041-B6BF-8628D1A18A21}
-		{61E57EA6-421D-4AC4-B013-F6981CB9BF34} = {0A1AB570-E01F-4904-96A7-EFC4E6CA59D2}
+		{31C516B5-759C-4D8F-8D8C-5F5CC1797C6C} = {DD646CDC-7308-4291-AEC1-1E76D3D80AAB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {692E7DF6-9876-48AD-8DDC-1C9F371A868D}
