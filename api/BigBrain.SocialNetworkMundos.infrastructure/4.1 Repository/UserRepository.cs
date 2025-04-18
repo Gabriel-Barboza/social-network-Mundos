@@ -62,6 +62,21 @@ namespace BigBrain.SocialNetworkMundos.Infra.Repository
             await _context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<bool> EmailExistsAsync(string email)
+        {
+            return await _context.Users.AnyAsync(u => u.Email == email);
+        }
+        public async Task<User?> GetByEmailAsync(string email)
+        {
+            return await _context.Users
+                .FirstOrDefaultAsync(u => u.Email == email);
+        }
+
+        public async Task<bool> UsernameExistsAsync(string username)
+        {
+            return await _context.Users.AnyAsync(u => u.Username == username);
+        }
     }
 
 }

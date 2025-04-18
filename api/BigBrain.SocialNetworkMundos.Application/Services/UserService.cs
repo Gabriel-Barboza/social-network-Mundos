@@ -1,34 +1,63 @@
-﻿using BigBrain.SocialNetworkMundos.Domain.Entities;
+﻿
+using BigBrain.SocialNetworkMundos.Domain.Entities;
 using BigBrain.SocialNetworkMundos.Domain.Interfaces;
 using BigBrain.SocialNetworkMundos.Domain.Models.Requests;
 using BigBrain.SocialNetworkMundos.Domain.Models.Response;
+
 
 namespace BigBrain.SocialNetworkMundos.Application.Services
 {
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-        public UserService(IUserRepository userRepository)
+        private readonly ITokenService _tokenService;
+
+        public UserService(IUserRepository userRepository, ITokenService tokenService)
         {
             _userRepository = userRepository;
+            _tokenService = tokenService;
         }
-        public async Task<User> CreateUserAsync(CreateUserRequest request)
+        public async Task<UserResponse> CreateUserAsync(CreateUserRequest request)
         {
+            if (!request.IsValidEmail(request.Email))
+            {
+                throw new Exception("Invalid email format.");
+            }
+            if (await _userRepository.EmailExistsAsync(request.Email))
+            {
+                throw new Exception("Email already exists.");
+            }
+            
+
+
+            if (await _userRepository.UsernameExistsAsync(request.Username))
+            {
+                throw new Exception("Username already exists.");
+            }
+
             var user = new User
             {
-
                 Name = request.Name,
                 Username = request.Username,
                 Email = request.Email,
-                Bio = request.Bio,
-                Password = request.Password,
+                
+                Password = BCrypt.Net.BCrypt.HashPassword(request.Password),
                 CreatedAt = DateTime.UtcNow,
-
             };
 
             user = await _userRepository.CreateUserAsync(user);
-            return user;
+            var userResponse = new UserResponse
+            {
+                Id = user.Id.ToString(),
+                Name = user.Name,
+                Email = user.Email,
+                
+                Username = user.Username,
+            };
+
+            return userResponse;
         }
+        
 
 
         public async Task<UserResponse[]> GetAllUsersAsync()
@@ -37,7 +66,7 @@ namespace BigBrain.SocialNetworkMundos.Application.Services
 
             var response = users.Select(user => new UserResponse
             {
-                Id = user.Id.ToString(), // Convert Guid to string
+                Id = user.Id.ToString(),
                 Name = user.Name,
                 Email = user.Email,
                 Bio = user.Bio,
@@ -113,7 +142,9 @@ namespace BigBrain.SocialNetworkMundos.Application.Services
             {
                 user.Bio = request.Bio;
             } 
-            
+
+            user.UpdatedAt = DateTime.UtcNow;
+
             await _userRepository.UpdateUserAsync(user);
             var userResponse = new UserResponse
             {
@@ -139,6 +170,22 @@ namespace BigBrain.SocialNetworkMundos.Application.Services
             await _userRepository.DeleteUserAsync(id); 
             return true; 
         }
+        public async Task<string?> LoginAsync(string email, string password)
+        {
+            var user = await _userRepository.GetByEmailAsync(email);
+            if (user == null)
+                throw new Exception("Invalid email or password");
+
+            // Verify password (use BCrypt or similar)
+            if (!BCrypt.Net.BCrypt.Verify(password, user.Password))
+                throw new Exception("Invalid email or password");
+
+            // Generate JWT token
+            var token = _tokenService.GenerateToken(user);
+            return token;
+        }
+        }
+
     }
-}
+
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BigBrain.SocialNetworkMundos.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0240782e173a95eb3a28d48fb132c260fa29572")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5386dd1b5185f428920791aee8d1719c7a61ac34")]
 [assembly: System.Reflection.AssemblyProductAttribute("BigBrain.SocialNetworkMundos.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BigBrain.SocialNetworkMundos.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

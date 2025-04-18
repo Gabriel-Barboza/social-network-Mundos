@@ -1,6 +1,9 @@
 ﻿using BigBrain.SocialNetworkMundos.Domain.Interfaces;
 using BigBrain.SocialNetworkMundos.Domain.Models.Requests;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace BigBrain.SocialNetworkMundos.Api.Controllers
 {
@@ -10,12 +13,16 @@ namespace BigBrain.SocialNetworkMundos.Api.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
-        public UsersController(IUserService userService)
+        private readonly IUserContextService _userContextService;
+        public UsersController(IUserService userService, IUserContextService userContextService)
         {
             _userService = userService;
+            _userContextService = userContextService;
         }
 
         [HttpPost]
+
+
         public async Task<IActionResult> CreateUser([FromBody] CreateUserRequest request)
         {
             if (request == null)
@@ -29,6 +36,9 @@ namespace BigBrain.SocialNetworkMundos.Api.Controllers
             }
             return Ok(user);
         }
+
+
+
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
@@ -65,29 +75,35 @@ namespace BigBrain.SocialNetworkMundos.Api.Controllers
 
             return Ok(user);
         }
-
-        [HttpPut("{Id}")]
-
-        public async Task<IActionResult> UpdateUser([FromRoute] Guid Id, [FromBody] UpdateUserRequest request)
+        [Authorize]
+        [HttpPut]
+        public async Task<IActionResult> UpdateUser([FromBody] UpdateUserRequest request)
         {
             if (request == null)
-            {
                 return BadRequest("Invalid user data.");
-            }
 
-            var user = await _userService.UpdateUserAsync(Id, request);
-            if (user == null)
-            {
+            var userId = _userContextService.GetUserId();
+            if (userId == null)
+                return Unauthorized("ID do usuário não encontrado no token.");
+
+            var updatedUser = await _userService.UpdateUserAsync(userId.Value, request);
+            if (updatedUser == null)
                 return NotFound("User not found.");
-            }
-            return Ok(user);
+
+            return Ok(updatedUser);
         }
+        [Authorize]
+        [HttpDelete]
 
-        [HttpDelete("{Id}")]
-
-        public async Task<IActionResult> DeleteUser([FromRoute] Guid Id)
+        public async Task<IActionResult> DeleteUser()
         {
-            var user = await _userService.DeleteUserAsync(Id);
+            var userId = _userContextService.GetUserId();
+            if (userId == null)
+                return Unauthorized("ID do usuário não encontrado no token.");
+
+
+
+            var user = await _userService.DeleteUserAsync(userId.Value);
             return Ok();
 
         }

@@ -6,7 +6,7 @@ namespace BigBrain.SocialNetworkMundos.Domain.Interfaces
 {
     public interface IUserService
     {
-        public Task<User> CreateUserAsync(CreateUserRequest request);
+        public Task<UserResponse> CreateUserAsync(CreateUserRequest request);
         public Task<UserResponse[]> GetAllUsersAsync();
 
         public Task<List<UserResponse>> GetUsersByNameOrUsernameAsync(GetUsersRequest request);
@@ -15,5 +15,7 @@ namespace BigBrain.SocialNetworkMundos.Domain.Interfaces
         public Task<UserResponse?> UpdateUserAsync(Guid id, UpdateUserRequest request);
 
         public Task<bool>DeleteUserAsync(Guid id);
+
+        public Task<string?> LoginAsync(string email, string password);
     }
 }

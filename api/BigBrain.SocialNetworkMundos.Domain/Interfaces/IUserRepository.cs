@@ -11,5 +11,9 @@ namespace BigBrain.SocialNetworkMundos.Domain.Interfaces
         public Task<User?> GetUsersByIdAsync(Guid Id);
         public Task<User> UpdateUserAsync(User user);
         public Task<bool> DeleteUserAsync(Guid id);
+        public Task<bool> EmailExistsAsync(string email);
+        public Task<bool> UsernameExistsAsync(string username);
+
+        public Task<User?> GetByEmailAsync(string email);
     }
 }
