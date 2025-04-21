@@ -15,5 +15,7 @@ namespace BigBrain.SocialNetworkMundos.Domain.Interfaces
         public Task<bool> UsernameExistsAsync(string username);
 
         public Task<User?> GetByEmailAsync(string email);
+ 
+
     }
 }

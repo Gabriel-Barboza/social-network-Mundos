@@ -186,3 +186,4 @@ C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Api\bin
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Api\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Api\bin\Debug\net8.0\BigBrain.SocialNetworkMundos.Api.staticwebassets.runtime.json

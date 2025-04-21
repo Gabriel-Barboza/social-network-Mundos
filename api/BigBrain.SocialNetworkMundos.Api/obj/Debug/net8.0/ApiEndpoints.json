@@ -98,5 +98,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BigBrain.SocialNetworkMundos.Api.Controllers.UsersController",
+    "Method": "UploadProfilePicture",
+    "RelativePath": "api/Users/upload-profile-picture",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

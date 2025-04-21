@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\super\\Documents\\social-network\\api\\BigBrain.SocialNetworkMundos.Api\\wwwroot\\profile-pictures\\86680486-a2e1-4024-b450-3022060aa81b.webp",
+      "PackagePath": "staticwebassets\\profile-pictures\\86680486-a2e1-4024-b450-3022060aa81b.webp"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BigBrain.SocialNetworkMundos.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BigBrain.SocialNetworkMundos.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BigBrain.SocialNetworkMundos.Api.props",
+      "PackagePath": "build\\BigBrain.SocialNetworkMundos.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BigBrain.SocialNetworkMundos.Api.props",
+      "PackagePath": "buildMultiTargeting\\BigBrain.SocialNetworkMundos.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BigBrain.SocialNetworkMundos.Api.props",
+      "PackagePath": "buildTransitive\\BigBrain.SocialNetworkMundos.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

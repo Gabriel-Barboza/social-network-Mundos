@@ -17,5 +17,6 @@ namespace BigBrain.SocialNetworkMundos.Domain.Interfaces
         public Task<bool>DeleteUserAsync(Guid id);
 
         public Task<string?> LoginAsync(string email, string password);
+        Task<bool> UpdateProfilePictureAsync(Guid userId, string imageUrl);
     }
 }

@@ -2,8 +2,6 @@
 using BigBrain.SocialNetworkMundos.Domain.Models.Requests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 
 namespace BigBrain.SocialNetworkMundos.Api.Controllers
 {
@@ -14,10 +12,12 @@ namespace BigBrain.SocialNetworkMundos.Api.Controllers
     {
         private readonly IUserService _userService;
         private readonly IUserContextService _userContextService;
-        public UsersController(IUserService userService, IUserContextService userContextService)
+        private readonly IImageValidationService _imageValidationService;
+        public UsersController(IUserService userService, IUserContextService userContextService, IImageValidationService imageValidationService)
         {
             _userService = userService;
             _userContextService = userContextService;
+            _imageValidationService = imageValidationService;
         }
 
         [HttpPost]
@@ -59,7 +59,7 @@ namespace BigBrain.SocialNetworkMundos.Api.Controllers
                 return BadRequest("Invalid search criteria.");
             }
             var users = await _userService.GetUsersByNameOrUsernameAsync(request);
-            if (users == null || users.Count == 0) 
+            if (users == null || users.Count == 0)
             {
                 return NotFound("No users found matching the criteria.");
             }
@@ -107,6 +107,34 @@ namespace BigBrain.SocialNetworkMundos.Api.Controllers
             return Ok();
 
         }
+        [Authorize]
+        [HttpPost("upload-profile-picture")]
+        public async Task<IActionResult> UploadProfilePicture(IFormFile file)
+        {
+            if (!_imageValidationService.IsValidImage(file, out var error))
+            {
+                return BadRequest(error);
+            }
+
+            var userId = _userContextService.GetUserId();
+
+
+            var fileExtension = Path.GetExtension(file.FileName);
+            var fileName = $"{userId}{Guid.NewGuid()}{fileExtension}";
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/profile-pictures", fileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            var imageUrl = $"{Request.Scheme}://{Request.Host}/profile-pictures/{fileName}";
+
+            await _userService.UpdateProfilePictureAsync(userId.Value, imageUrl);
+
+            return Ok(new { imageUrl });
+        }
+
     }
 }
 

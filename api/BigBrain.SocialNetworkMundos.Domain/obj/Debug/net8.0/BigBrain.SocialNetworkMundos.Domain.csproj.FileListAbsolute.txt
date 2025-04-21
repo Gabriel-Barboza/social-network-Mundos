@@ -12,3 +12,4 @@ C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Domain\
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Domain\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Domain.pdb
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Domain\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Domain.genruntimeconfig.cache
 C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Domain\obj\Debug\net8.0\ref\BigBrain.SocialNetworkMundos.Domain.dll
+C:\Users\super\Documents\social-network\api\BigBrain.SocialNetworkMundos.Domain\obj\Debug\net8.0\BigBrain.SocialNetworkMundos.Domain.csproj.AssemblyReference.cache

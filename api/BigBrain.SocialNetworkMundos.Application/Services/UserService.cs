@@ -50,6 +50,7 @@ namespace BigBrain.SocialNetworkMundos.Application.Services
             {
                 Id = user.Id.ToString(),
                 Name = user.Name,
+                ProfilePicture = user.ProfilePicture,
                 Email = user.Email,
                 
                 Username = user.Username,
@@ -68,6 +69,7 @@ namespace BigBrain.SocialNetworkMundos.Application.Services
             {
                 Id = user.Id.ToString(),
                 Name = user.Name,
+                ProfilePicture = user.ProfilePicture,
                 Email = user.Email,
                 Bio = user.Bio,
                 Username = user.Username,
@@ -88,6 +90,7 @@ namespace BigBrain.SocialNetworkMundos.Application.Services
             {
                 Id = user.Id.ToString(),
                 Name = user.Name,
+                ProfilePicture = user.ProfilePicture,
                 Email = user.Email,
                 Bio = user.Bio,
                 Username = user.Username,
@@ -111,6 +114,7 @@ namespace BigBrain.SocialNetworkMundos.Application.Services
 
                 Id = user.Id.ToString(),
                 Name = user.Name,
+                ProfilePicture = user.ProfilePicture,
                 Email = user.Email,
                 Bio = user.Bio,
                 Username = user.Username,
@@ -184,7 +188,17 @@ namespace BigBrain.SocialNetworkMundos.Application.Services
             var token = _tokenService.GenerateToken(user);
             return token;
         }
+
+        public async Task<bool> UpdateProfilePictureAsync(Guid userId, string imageUrl)
+        {
+            var user = await _userRepository.GetUsersByIdAsync(userId);
+            if (user == null) return false;
+
+            user.ProfilePicture = imageUrl;
+            await _userRepository.UpdateUserAsync(user);
+            return true;
         }
+    }
 
     }
 
